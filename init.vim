@@ -8,7 +8,7 @@ set showcmd
 
 set hlsearch
 
-set autoindent
+"set autoindent
 
 set nostartofline
 
@@ -77,11 +77,11 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 augroup END
 
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+"let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+"if empty(glob(data_dir . '/autoload/plug.vim'))
+"  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+"  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+"endif
 
 call plug#begin()
 
@@ -156,13 +156,14 @@ let g:vim_markdown_json_frontmatter = 1  " for JSON format
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 " do not close the preview tab when switching to other buffers
 let g:mkdp_auto_close = 0
 
 let g:mkdp_browser = 'firefox'
 call plug#end()
 
-colorscheme dracula
+colorscheme catppuccin-mocha
+
 
 map Y y$
