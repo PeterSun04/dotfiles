@@ -1,0 +1,8 @@
+[pyprland]
+plugins = ["monitors", "shift_monitors", "workspaces_follow_focus"]
+
+[workspaces_follow_focus]
+max_workspaces = 10
+
+[monitors.placement]
+"BOE".leftof = "Acer"
