@@ -1,0 +1,14 @@
+#!/bin/bash
+# changeVolume
+
+# Arbitrary but unique message tag
+msgTag="mybrightness"
+
+# Change the volume using alsa(might differ if you use pulseaudio)
+# amixer -c 0 set Master "$@" > /dev/null
+
+# Query amixer for the current volume and whether or not the speaker is muted
+brightness=$(( $( brightnessctl get ) * 100 / 255 ))
+
+# Show the volume notification
+dunstify -a "changeBrightness" -u low -h string:x-dunst-stack-tag:$msgTag -h int:value:$brightness "Brightness: ${brightness}%"
