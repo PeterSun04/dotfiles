@@ -57,7 +57,7 @@ window > box {
 
 /* Workspaces */
 #workspaces:hover {
-  background-color: @rosewater;
+  color: @rosewater;
   border: none;
 }
 
@@ -128,7 +128,7 @@ tooltip label {
   /* background: transparent; */
 }
 #mpd {
-    color: @lavender;
+    color: @rosewater;
 }
 
 /* Extra */

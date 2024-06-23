@@ -26,13 +26,15 @@
 
 	"mpd": {
             "tooltip": false,
-            "format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+            //"format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+            "format": "{stateIcon} {title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
             "format-disconnected": "",
             "format-stopped": "",
             "state-icons": {
                 "playing": "▶",
                 "paused": ""
-            }
+            },
+            "on-click": "foot -m ncmpcpp"
 	},
 
         "tray": {
@@ -74,7 +76,7 @@
 
 	"cpu": {
             "tooltip": false,
-            "format": "cpu: {usage}%"
+            "format": "CPU: {usage}%"
 	},
 
 	"memory": {
