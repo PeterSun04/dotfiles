@@ -15,13 +15,15 @@ progress_bar_frame_width = 0
 
 transparency = 3
 horizontal_padding = 11
-frame_width = 6
-frame_color = "#3b4252"
+frame_width = 3
+#frame_color = "#3b4252"
+#separator_color = "#404859"
+frame_color = "#89B4FA"
+separator_color= frame
 gap_size = 8
-separator_color = "#404859"
 idle_threshold = 120
 
-font = "mplus Nerd Font 10"
+font = "JetBrainsMono 10"
 
 format = "<span size='x-large' font_desc='Cantarell,mplus Nerd Font 9' weight='bold' foreground='#f9f9f9'>%s</span>\n%b"
 
@@ -53,20 +55,27 @@ corner_radius = 8
 
 [urgency_low]
 timeout = 3
-background = "#3b4252"
-foreground = "#f9f9f9"
+#background = "#3b4252"
+#foreground = "#f9f9f9"
+background = "#1E1E2E"
+foreground = "#CDD6F4"
 highlight = "#f48ee8"
 
 [urgency_normal]
 timeout = 6
-background = "#3b4252"
-foreground = "#f9f9f9"
+#background = "#3b4252"
+#foreground = "#f9f9f9"
+background = "#1E1E2E"
+foreground = "#CDD6F4"
 highlight = "#f48ee8"
 
 [urgency_critical]
 timeout = 0
-background = "#3b4252"
-foreground = "#f9f9f9"
+#background = "#3b4252"
+#foreground = "#f9f9f9"
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+frame_color = "#FAB387"
 highlight = "#f48ee8"
 
 [joyful_desktop]
